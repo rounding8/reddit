@@ -77,5 +77,6 @@ $ yarn build            # Generates Production *dist* distribution index.html, b
 
 | Version | Date     | Commit                                                                                         | Description |
 |---------|----------|------------------------------------------------------------------------------------------------|-------------|
+| 1.0.0   | 12-11-18 | [46f65dd](https://github.com/rounding8/reddit/commit/46f65ddd16aa9941dd9458b375ac93f8451dfe9e) | ✅  Initial app framework |
 | 0.0.0   | 12-11-18 | [a10fe83](https://github.com/rounding8/reddit/commit/a10fe835298fa327f06d7305ee926fd809401847) | 🎉  Initial commit |
 
