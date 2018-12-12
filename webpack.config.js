@@ -1,6 +1,7 @@
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path              = require('path');
+const HtmlWebpackPlugin    = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path                 = require('path');
 
 module.exports = {
   entry: ['@babel/polyfill', './src/index.jsx'],
@@ -12,6 +13,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test : /\.css$/,
+        use  : [{ loader: MiniCssExtractPlugin.loader }, 'css-loader']
+      },
+      {
         test    : /\.(js|jsx)$/,
         exclude : /node_modules/,
         use     : ['babel-loader']
@@ -19,10 +24,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions : ['.js', '.jsx'],
+    extensions : ['.css', '.js', '.jsx'],
     modules    : ['node_modules', 'public', 'src']
   },
   plugins: [
+    new MiniCssExtractPlugin('styles.css'),
     new HtmlWebpackPlugin({
       title    : 'Given a ‘listing’ endpoint to the reddit API display a list of reddit listings with the thumbnail and title',
       template : 'public/html/index.html',
