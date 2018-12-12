@@ -32,9 +32,13 @@ $ yarn build            # Generates Production *dist* distribution index.html, b
 |- dist                 -- Webpack build of full-stack application
   |- index.html         // Single HTML Index File for Testing Progress SPA
   |- bundle.js          // Single webpack compiled source script of Application for Production
+  |- styles.css         // Single webpack compiled source CSS of Application for Production
   |- ...                // Bundled assets to be included w/ dist (e.g. favicon.ico, custom font files, etc.)
 |- node_modules/        // Packages installed via Yarn (dependencies & devDependencies)
 |- public               -- Public assets
+  |- css
+    |- app.css          // Main CSS Source of app styles; imports child CSS modules
+    |- ...
   |- html
     |- index.html       // Main HTML Source
   |- icon
@@ -69,7 +73,7 @@ $ yarn build            # Generates Production *dist* distribution index.html, b
 
 <br>
 
-> See additional [development dependencies](https://github.com/rounding8/reddit/blob/master/package.json#L32-L43)
+> See additional [development dependencies](https://github.com/rounding8/reddit/blob/master/package.json#L32-L45)
 
 <br>
 
